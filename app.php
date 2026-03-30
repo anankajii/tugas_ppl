@@ -16,7 +16,7 @@ if ($pilih == 1) {
 }
 
 elseif ($pilih == 2) {
-    for ($i = 1; $i < 5; $i++) {
+    for ($i = 1; $i <= 5; $i++) {
         echo $i . "\n";
     }
 }
