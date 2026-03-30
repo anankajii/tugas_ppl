@@ -1,17 +1,36 @@
+<?php
+session_start();
+
+$products = [
+    ["nama" => "Baju", "harga" => 50000],
+    ["nama" => "Celana", "harga" => 75000],
+    ["nama" => "Sepatu", "harga" => 100000]
+];
+
+if (isset($_GET['add'])) {
+    $id = $_GET['add'];
+
+    $_SESSION['cart'][] = $products[$id];
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login</title>
+    <title>Shop</title>
 </head>
 <body>
 
-<h2>Login</h2>
+<h2>Produk</h2>
 
-<form method="POST" action="login.php">
-    <input type="text" name="username" placeholder="Username"><br><br>
-    <input type="password" name="password" placeholder="Password"><br><br>
-    <button type="submit">Login</button>
-</form>
+<?php foreach ($products as $i => $p): ?>
+    <p>
+        <?= $p['nama'] ?> - <?= $p['harga'] ?>
+        <a href="?add=<?= $i ?>">Tambah</a>
+    </p>
+<?php endforeach; ?>
+
+<a href="cart.php">Lihat Keranjang</a>
 
 </body>
 </html>
