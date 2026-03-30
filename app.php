@@ -23,7 +23,8 @@ elseif ($pilih == 2) {
 
 elseif ($pilih == 3) {
     $n = readline("Masukkan angka: ");
-    if ($n % 2 == 0) {
+    if ($n % 2 == 0) { 
+        // Kesalahan penggunaan operator = harus diganti dengan == untuk perbandingan
         echo "Genap\n";
     } else {
         echo "Ganjil\n";
