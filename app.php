@@ -9,7 +9,7 @@ echo "5. Keluar\n";
 
 $pilih = readline("Pilih: ");
 
-if ($pilih = 1) {
+if ($pilih == 1) {
     $a = readline("Angka 1: ");
     $b = readline("Angka 2: ");
     echo "Hasil: " . $a + $b . "\n"; 
