@@ -34,6 +34,7 @@ elseif ($pilih == 3) {
 elseif ($pilih == 4) {
     $s = readline("Sisi: ");
     $luas = $s * $s;
+    //Rumus luas persegi adalah sisi × sisi, tidak ada tambahan angka.
     echo "Luas: $luas\n";
 }
 
